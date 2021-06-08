@@ -13,7 +13,7 @@ export const QuestionCard = (props) => {
       <center>
         <div className="card" style={{ width: "18rem" }}>
           <form>
-            <label htmlFor="exampleInputEmail1" className="form-label">
+            <label htmlFor="exampleInputEmail1" className="form-label" required>
               {props.index + 1}: {props.q.q}
             </label>
 
@@ -26,7 +26,11 @@ export const QuestionCard = (props) => {
                 id="flexRadioDefault1"
                 onChange={handleChange}
               />
-              <label className="form-check-label" htmlFor="flexRadioDefault1">
+              <label
+                className="form-check-label"
+                htmlFor="flexRadioDefault1"
+                required
+              >
                 {props.q.o1}
               </label>
             </div>
@@ -38,7 +42,6 @@ export const QuestionCard = (props) => {
                 id="flexRadioDefault2"
                 value="o2"
                 onChange={handleChange}
-                // disabled="false"
               />
               <label className="form-check-label" htmlFor="flexRadioDefault2">
                 {props.q.o2}

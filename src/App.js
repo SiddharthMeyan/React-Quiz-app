@@ -44,7 +44,6 @@ function App() {
 
   const [rightAnswer] = useState(["o2", "o4", "o1", "o1", "o3"]);
   const [userAnswer, setuserAnswer] = useState([]);
-  const [scores, setScores] = useState(0);
 
   const handleSubmit = () => {
     checkAnswers();
@@ -56,7 +55,6 @@ function App() {
     rightAnswer.forEach((answer, index) => {
       if (answer === userAnswer[index]) {
         myinc = myinc + 1;
-        setScores(() => myinc);
 
         console.log(myinc);
       } else {
